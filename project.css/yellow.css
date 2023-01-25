@@ -1,0 +1,532 @@
+/* globale rules */
+:root{
+    --yellow-color:#ffe600;
+    --main-padding:100px;
+}
+/* start compnants */
+.main-heading{
+    text-align: center;
+    padding-bottom: var(--main-padding);
+}
+.main-heading .main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.main-heading .main-container h4{
+    font-size: 26px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.main-heading .main-container > p{
+    color: #ffe600;
+    font-weight: 800;
+
+}
+/* end conpnents */
+/* global rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+ul{
+    list-style: none;
+
+}
+a{
+   text-decoration: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small*/
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/* medium*/
+@media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+
+/* large*/
+@media(min-width: 1100px){
+    .container{
+        /* width: 1170px; */
+    }
+}
+
+/*  end global rules */
+/* start heeader*/
+header{
+    position: relative;
+    background-image: url('../yellowmoon/img/header_bg.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+@media(max-width:767px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 1px;
+        width: 400px;
+    }
+    .nav-bar{
+        display: none;
+    }
+}
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+header .container{
+    text-align: center;
+    position: relative;
+    color: white;
+}
+header .container svg{
+    width: 100px;
+    margin: 90px 0 40px;
+}
+header .container p{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+header .container h1{
+    color: var(--yellow-color);
+    font-weight: normal;
+    line-height: 2;
+    margin: 20px 0 20px;
+}
+header .container a{
+    display: block;
+    margin: 83px;
+    width: max-content;
+    text-align: center;
+    margin: 82px auto 52px;
+    padding: 23px 87px;
+    border: 1px solid var(--yellow-color);
+    color: white;
+    text-transform: uppercase;
+    transition: 1s;
+}
+header .container a:hover{
+
+    background-color: var(--yellow-color);
+    color: black;
+}
+header .container i{
+    font-size: 31px;
+}
+/* end header */
+
+/* start nav bar */
+.nav-bar{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: white;
+    padding: 20px 20px 10px;
+    border-bottom: 1px solid var(--yellow-color);
+    width: 100%;
+    background-color: white;
+
+}
+.nav-bar ul{
+    display: flex;
+    justify-content: space-between;
+    width: 558px;
+}
+@media(max-width:767px){
+    .nav-bar ul{
+        display: none;
+    }
+    .nav-bar .home svg{
+        width: 200px;
+    }
+}
+.nav-bar ul li {
+    padding: 10px 4px;
+}
+.nav-bar ul li , ul li a:hover{
+    content: '';
+    opacity: 4;
+    color: #ffe600;
+}
+.home svg{
+    width: 170px;
+}
+.nav-bar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar ul a{
+    color: #7c7979;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+/* end nav bar */
+/* about main */
+.about{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.main-about{
+    display: flex;
+    gap: 40px;
+    padding-top: 100px;
+}
+.main-about .box .title i{
+    font-size: 30px;
+    padding: 19px;
+    border-right: 1px solid black;
+}
+@media(max-width:767px){
+    .main-about{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-about .box .title{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-about .box .title i{
+        font-size: 30px;
+        padding: 15px 40px;
+        border:none;
+        border-bottom: 1px solid #ffe600;
+        margin-bottom: 30px;
+        color: #ffe600;
+    }
+}
+.main-about .box{
+    flex-basis: 100%;
+}
+.main-about .box .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-about .box .title h4{
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 15px;
+}
+.main-about .box p{
+    padding-top: 40px;
+    padding-top: 20px;
+    line-height: 2;
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+/* main about  */
+/* start rand*/
+.random{
+    background-image: url('../yellowmoon/img/about_bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+    position: relative;
+}
+.random::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgba(255, 255, 0, 0.699);
+}
+.random .container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(100px, 200px);
+}
+.random .container h1{
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 1.5;
+    font-style: italic;
+}
+.random .container p{
+    font-weight: 800;
+    padding: 40px;
+    color: white;
+}
+@media(max-width:767px){
+    .random{
+        background-position: center;
+    }
+    .random .container{
+        transform: translate(0%, 100%);
+    }
+    .random .container h1{
+        font-weight: 900;
+    }
+    .random .container p{
+        padding: 10px 0;
+        line-height: 1.5;
+    }
+}
+/* end random */
+/*  start portfolio */
+.portfolio{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.portfolio .main-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+.portfolio .main-portfolio .box{
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+}
+
+@media(min-width:768px){
+    .portfolio .main-portfolio .box {
+        flex-basis: 50%;
+}
+}
+@media(min-width:1199px){
+    .portfolio .main-portfolio .box {
+        flex-basis: 25%;
+    }
+}
+.portfolio .box img{
+    max-width: 100%;
+    position: relative;
+}
+.portfolio .box .box-sweep{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 255, 255, 0.274);
+    height: 100%;
+    width: 100%;
+    bottom: -250px;
+    transition: 1.5s;
+}
+.main-portfolio .box .box-sweep p{
+    margin-top: 10px;
+    color: white;
+}
+.portfolio .box:hover .box-sweep {
+   background-color: #ffe60079;
+    bottom:0px;
+    position: absolute;
+}
+.portfolio .container .more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.portfolio .container .more h1{
+    font-size: 21px;
+    font-weight: normal;
+}
+.portfolio .container .more i{
+    font-size: 35px;
+    color: #ffe600;
+
+}
+/* end portfolio */
+.clients{
+    position: relative;
+    background-image: url('../../yellowmoon/img/clients_bg.jpg');
+    background-size: cover;
+    height: 450px;
+    color: white;
+}
+.clients::before{
+    content: '';
+    position: absolute;
+    top:0 ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.753);
+}
+.clients .container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.clients .container h1{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-weight: normal;
+    font-size: 27px;
+    margin-top: 51px;
+
+}
+.clients .container p{
+    color: #ffe600;
+
+}
+.clients .container .icones{
+    margin-top: 170px ;
+     display: flex;
+    gap: 90px;
+    
+}
+.clients .container .icones svg{
+    margin-top: 20px;
+    width: 70px;
+}
+@media(max-width:767px){
+    .clients{
+        background-position: center;
+    }
+    .clients .container .icones{
+        display: flex;
+        gap: 0;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        align-items: center;
+        width: 50%;
+        margin: 0;
+        justify-content: space-between;
+    }
+    .clients .container p{
+    text-align: center;
+    margin: 0;
+    }
+}
+/* /* start cl ien=== */
+
+/* start contact */
+.contact{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}   
+form input{
+    padding: 15px 12px ;
+}
+form .active{
+    display: flex;
+}
+@media(max-width:767px){
+    .contact .container form input , textarea{
+        border: 1px solid black;
+        background-color: #ffe600;
+    }
+    .contact .container form .active{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contact .container form .active .active1{
+        margin: 0;
+    }
+}
+.container form .active .active1{
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+}
+.container form .main-input{
+    height: 200px;
+    padding: 10px;
+}
+.contact .container form a{
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #4c3939;
+    color: yellow;
+}
+.contact .container form a:hover{
+    background-color: white;
+    color: black;
+}
+
+/* end .contact */
+
+/* start foot */
+.foot{
+    width: 100%;
+    height: 100px;
+    background-color: #322626;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.foot .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 70px;
+    width: 100%;
+}
+@media(max-width:767px){
+    .foot{
+        height: 100%;
+    }
+    .foot .container{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        height: 200px;
+        padding: 40px;
+        text-align: center;
+        margin: 0;
+    }
+}
+.foot .container p{
+    color: #ffe600;
+}
+.foot .container .icones{
+    font-size: 20px;
+}
+.foot .container .icones i{
+    margin-left: 15px;
+}
+
+
+/* end foot */
